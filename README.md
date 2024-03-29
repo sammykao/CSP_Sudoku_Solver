@@ -1,4 +1,4 @@
-SUDOKU PROBLEM INTRO
+# SUDOKU PROBLEM INTRO
     - Given a sudoku puzzle that is unfinished, complete the puzzle
     - So, given:
     [6, 0, 8, 7, 0, 2, 1, 0, 0]
@@ -12,7 +12,7 @@ SUDOKU PROBLEM INTRO
     [0, 0, 6, 8, 0, 5, 2, 0, 3]
     The 0s must be replaced with numbers that satisfy our sudoku.
 
-REPRESENTING AS A CONSTRAINT SATISFACTION PROBLEM
+## REPRESENTING AS A CONSTRAINT SATISFACTION PROBLEM
     - To define our problem as a CSP problem, we need to define
     our variables, domains, and constraints
     - Our variables will be all the empty spaces in the sudoku puzzle
@@ -23,7 +23,7 @@ REPRESENTING AS A CONSTRAINT SATISFACTION PROBLEM
         - Each col must have all unique values
         - Each mini box of sqrt n sizze must have all unique values
 
-ALGORITHMS & PRUNING:
+## ALGORITHMS & PRUNING:
     - Our satisfaction algorithm implements chronological backtracking search.
     It is an improved version uninformed searching algorithm based on the Depth-first 
     search. Each step considers only one assignment at a time. It also checks
@@ -39,12 +39,12 @@ ALGORITHMS & PRUNING:
         if there's no possible assignments.
         - This saves times and there will be less recurses
 
-ASSUMPTIONS:
+## ASSUMPTIONS:
     - Sudoku is formatted as a list of lists
     - Assumes empty values are 0s
     - Assumes puzzle is solvable with given input
 
-Notes:
+## Notes:
     - It properly solves the HW puzzles, just don't say yes to custom puzzles
     to see the HW problems
     - Custom puzzle can be any size
